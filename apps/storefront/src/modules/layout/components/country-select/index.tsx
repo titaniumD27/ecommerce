@@ -71,24 +71,18 @@ const CountrySelect = ({ toggleState, regions }: CountrySelectProps) => {
             : undefined
         }
       >
-        <ListboxButton className="py-1 w-full">
-          <div className="txt-compact-small flex items-start gap-x-2">
-            <span>Shipping to:</span>
-            {current && (
-              <span className="txt-compact-small flex items-center gap-x-2">
-                <ReactCountryFlag
-                  svg
-                  style={{
-                    width: "16px",
-                    height: "16px",
-                  }}
-                  countryCode={current.country ?? ""}
-                />
-                {current.label}
-              </span>
-            )}
-          </div>
-        </ListboxButton>
+       <ListboxButton className="w-full py-1 text-left">
+  <div className="txt-compact-small flex flex-col items-start gap-y-1">
+    {/* Replaced the old shipping prompt; the country selector remains functional. */}
+    {/* <span>Shipping to:</span> */}
+
+    <span className="text-xs font-bold tracking-[0.16em] text-black">
+      MADE IN BANGLADESH
+    </span>
+
+
+  </div>
+</ListboxButton>
         <div className="flex relative w-full min-w-[320px]">
           <Transition
             show={state}

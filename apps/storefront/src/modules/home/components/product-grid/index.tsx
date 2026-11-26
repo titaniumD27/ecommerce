@@ -1269,14 +1269,14 @@ export default function ProductGrid(_props: ProductGridProps) {
       aria-labelledby="khoj-collection-title"
       style={{
         width: "100%",
-        padding: "clamp(32px, 5vw, 80px) 0",
+        padding: "clamp(12px, 1.5vw, 24px) 0 clamp(32px, 5vw, 80px) 0",
         color: "#171715",
         backgroundColor: "#ffffff",
         overflow: "hidden",
       }}
     >
       <div style={{ width: "100%", margin: "0 auto" }}>
-        <header
+        {/* <header
           style={{
             display: "flex",
             alignItems: "flex-end",
@@ -1296,10 +1296,35 @@ export default function ProductGrid(_props: ProductGridProps) {
               letterSpacing: "-0.065em",
             }}
           >
-            БАЗОВАЯ КОЛЛЕКЦИЯ
+            READY TO WEAR
           </h2>
-        </header>
-
+        </header> */}
+<header
+  style={{
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "clamp(12px, 1.8vw, 24px) clamp(16px, 3vw, 40px)",
+    marginBottom: "clamp(8px, 1vw, 14px)",
+    backgroundColor: "#FFFFFF",
+  }}
+>
+  <h2
+    id="khoj-collection-title"
+    style={{
+      margin: 0,
+      textAlign: "center",
+      color: "#800020",
+      fontFamily: "Arial, Helvetica Neue, sans-serif",
+      fontSize: "clamp(36px, 6.2vw, 96px)",
+      lineHeight: 0.92,
+      fontWeight: 850,
+      letterSpacing: "-0.065em",
+    }}
+  >
+    READY TO WEAR
+  </h2>
+</header>
         <InstantSearch
           searchClient={searchClient as unknown as SearchClient}
           indexName={PRODUCT_INDEX_NAME}
