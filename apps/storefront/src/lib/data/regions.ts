@@ -50,6 +50,7 @@ export const getRegion = async (countryCode: string) => {
       regionMap.set(c?.iso_2 ?? "", region)
     })
   })
+  console.log("Requested country:", countryCode, "Available countries:", [...regionMap.keys()])
 
   const region = countryCode
     ? regionMap.get(countryCode)
