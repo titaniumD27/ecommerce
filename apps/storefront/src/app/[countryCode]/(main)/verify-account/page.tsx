@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function VerifyAccountPage() {
   return (
-    <div className="w-full flex justify-center px-8 py-12">
+    <div className="w-full flex justify-center px-8 py-11 ">
       <Suspense
         fallback={
           <p className="text-base-regular text-ui-fg-base">
